@@ -22,7 +22,7 @@ def homepage():
 @app.route("/check-word")
 def check_word():
     """Check Validity of Word"""
-    word = request.args["word"]
+    word = request.args["word"] #Where the problem occurs - 'keyerror'
     board = session["board"]
     res = boggle_game.check_valid_word(board, word)
 
